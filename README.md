@@ -73,24 +73,24 @@ Do you want to know more? Head to the <a href="https://github.com/fastify/fastif
 
 __Machine:__ Intel Xeon E5-2686 v4 @ 2.30GHz (4 cores, 8 threads), 16GiB RAM (Amazon EC2 m4.xlarge)
 
-__Method:__: `autocannon -c 100 -d 10 -p 10 localhost:3000` * 2, taking the second average
+__Method:__: `autocannon -c 100 -d 40 -p 10 localhost:3000` * 2, taking the second average
 
 | Framework          | Version                    | Router?      |  Requests/sec |
 | :----------------- | :------------------------- | :----------: | ------------: |
-| hapi               | 16.6.2                     | &#10003;     | 5,768         |
-| Restify            | 5.2.0                      | &#10003;     | 17,589        |
-| Express            | 4.16.1                     | &#10003;     | 20,860        |
-| total.js           | 2.8.0                      | &#10003;     | 22,201        |
-| Koa (`koa-router`) | 2.3.0 (`koa-router@7.2.1`) | &#10003;     | 23,093        |
-| Koa                | 2.3.0                      | &#10007;     | 25,571        |
-| take-five          | 1.3.4                      | &#10003;     | 28,255        |
-| micro (`micro-router`) | 9.0.0 (`micro-router@2.2.3` ) | &#10003; | 28,700     |
-| connect (`router`) | 3.6.5 (`router@1.3.2`)     | &#10003;     | 33,753        |
-| **Fastify**        | **0.29.2**                 | **&#10003;** | **34,613**    |
-| micro              | 9.0.0                      | &#10007;     | 36,522        |
-| connect            | 3.6.5                      | &#10007;     | 37,810        |
+| hapi               | 17.0.1                     | &#10003;     | 20,907        |
+| Express            | 4.16.1                     | &#10003;     | 20,914        |
+| total.js           | 2.9.0                      | &#10003;     | 21,586        |
+| Koa (`koa-router`) | 2.4.1 (`koa-router@7.3.0`) | &#10003;     | 23,093        |
+| Restify            | 6.3.2                      | &#10003;     | 26,385        |
+| Koa                | 2.4.1                      | &#10007;     | 28,462        |
+| take-five          | 1.3.4                      | &#10003;     | 28,605        |
+| micro (`micro-router`) | 9.0.0 (`micro-router@2.2.3` ) | &#10003; | 29,341     |
+| **Fastify**        | **0.34.0**                 | **&#10003;** | **32,831**    |
+| connect (`router`) | 3.6.5 (`router@1.3.2`)     | &#10003;     | 34,875        |
+| micro              | 9.0.1                      | &#10007;     | 36,788        |
+| connect            | 3.6.5                      | &#10007;     | 38,772        |
 | -                  |                            |              |               |
-| `http.Server`      | 8.6.0                      | &#10007;     | 39,952        |
+| `http.Server`      | 8.9.1                      | &#10007;     | 42,368        |
 
 Benchmarks taken using https://github.com/fastify/benchmarks. This is a
 synthetic, "hello world" benchmark that aims to evaluate the framework
